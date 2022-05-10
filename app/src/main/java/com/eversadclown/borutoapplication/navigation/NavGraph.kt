@@ -1,0 +1,42 @@
+package com.eversadclown.borutoapplication.navigation
+
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
+import com.eversadclown.borutoapplication.presentation.screen.home.HomeScreen
+import com.eversadclown.borutoapplication.presentation.screen.splash.SplashScreen
+import com.eversadclown.borutoapplication.presentation.screen.welcome.WelcomeScreen
+import com.eversadclown.borutoapplication.util.Constants.DETAILS_ARGUMENT_KEY
+import com.google.accompanist.pager.ExperimentalPagerApi
+
+@ExperimentalPagerApi
+@Composable
+fun SetupNavGraph(navController: NavHostController) {
+
+    NavHost(navController = navController, startDestination = Screen.Splash.route) {
+        composable(route = Screen.Splash.route) {
+            SplashScreen(navController = navController)
+        }
+        composable(route = Screen.Welcome.route) {
+            WelcomeScreen(navController = navController)
+        }
+        composable(route = Screen.Home.route) {
+            HomeScreen(navController = navController)
+        }
+        composable(route = Screen.Details.route,
+            arguments = listOf(navArgument(DETAILS_ARGUMENT_KEY) {
+                type = NavType.IntType
+            })
+        ) {
+
+        }
+        composable(route = Screen.Search.route) {
+
+        }
+
+    }
+
+}

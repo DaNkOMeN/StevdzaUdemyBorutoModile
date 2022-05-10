@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BorutoApplication</string>
+    <string name="app_logo">App Logo image</string>
+    <string name="on_boarding_image">On Boarding Image</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="star_path">M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z</string>
+    <string name="hero_image">Hero image</string>
+</resources>
